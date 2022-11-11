@@ -9,11 +9,9 @@ import 'materialize-css/dist/css/materialize.min.css'
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import configureStore from "./configureStore";
+import './app.css';
 
 import App from "./components/App";
-
-import axios from "axios";
-window.axios = axios;
 
 const store = configureStore()
 

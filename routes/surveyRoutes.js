@@ -83,4 +83,11 @@ module.exports = (app) => {
     
     
   })
+  app.delete("/api/surveys/delete/:id",requireLogin, async (req,res)=>{
+    await Survey.deleteOne({_id:req.params.id}).exec();
+    const surveys = await Survey.find({
+      _user:req.user
+    }).select({ recipients: false });
+    res.send(surveys);
+  })
 };

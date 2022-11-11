@@ -8,7 +8,7 @@ import { withRouter } from "react-router-dom";
 const SurveyReview = ({ onCancel, formValues, submitSurvey, history }) =>{
     const reviewFields = _.map(formFields,({ label, name})=>{
         return(
-            <div key={name}>
+            <div key={name} style={{margin:"20px 20px"}}>
                 <label>{label}</label>
                 <div>{formValues[name]}</div>
             </div>
@@ -16,10 +16,10 @@ const SurveyReview = ({ onCancel, formValues, submitSurvey, history }) =>{
     })
     return(
         <div>
-            <h5>Por favor confirmar su informacion ingresada.</h5>
+            <h5 style={{margin:"10px 10px"}}>Por favor confirmar su informacion ingresada.</h5>
             {reviewFields}
-            <button className="yellow darken-3 btn flat" onClick={onCancel}>Regresar</button>
-            <button className="green right btn flat white-text" onClick={()=>submitSurvey(formValues,history)}>Enviar<i className="material-icons right">email</i></button>
+            <button style={{margin:"20px 20px"}} className="yellow darken-3 btn flat" onClick={onCancel}>Regresar</button>
+            <button style={{margin:"20px 20px"}} className="green right btn flat white-text" onClick={()=>submitSurvey(formValues,history)}>Enviar<i className="material-icons right">email</i></button>
         </div>
     );
 }

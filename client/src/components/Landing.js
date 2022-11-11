@@ -1,11 +1,11 @@
 import React from "react";
 const Landing = () => {
     return(
-        <div style={{ textAlign:'center'}}>
+        <div style={{ textAlign:'center', height:"100vh"}}>
             <h1>
-                Emaly!
+                Emaily!
             </h1>
-            Collect feedback form your users
+            Obten la retroalimentación de tus usuarios.!
         </div>
     );
 }
