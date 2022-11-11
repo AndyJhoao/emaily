@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import {Link} from "react-router-dom";
-import PaymentClassic from "./PaymentClassic";
+import PaymentClassic from "./payments/PaymentClassic";
 
 class Header extends Component {
   renderContent() {
@@ -26,8 +26,8 @@ class Header extends Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <Link to={this.props.auth ?"/surveys":"/"} href="#" className="brand-logo">
-            Emaly
+          <Link to={this.props.auth ?"/surveys":"/"} href="#" className="brand-logo" style={{ paddingLeft: "10px" }}>
+            Emaily
           </Link>
           <ul className="right">{this.renderContent()}</ul>
         </div>
