@@ -7,11 +7,12 @@ class PaymentsClassic extends Component{
     render(){
         return(
             <StripeCheckout 
-            name={"Emaily!"}
-            description={"$5 Por 5 creditos.!"}
+        name={"Emaily!"}
+            description={"Ejemplo: 4242 4242 4242 4242 4242"}
             amount={500}
             token={token=>this.props.handleToken(token)}
             stripeKey={process.env.REACT_APP_STRIPE_KEY}
+            
             >
                 <button className="btn">Añadir Fondos</button>
             </StripeCheckout>

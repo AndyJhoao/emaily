@@ -18,6 +18,8 @@
     "redux": "^4.2.0",
     "redux-form": "^8.3.8",
     "redux-thunk": "^2.4.1",
+    "sweetalert2": "^11.6.15",
+    "sweetalert2-react-content": "^5.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
