@@ -25,12 +25,14 @@ class Header extends Component {
   }
   render() {
     return (
-      <nav>
-        <div className="nav-wrapper" style={{ background:"#333C83"}}>
-          <img src="https://firebasestorage.googleapis.com/v0/b/emaily-956d8.appspot.com/o/emaily.png?alt=media&token=24c103b8-87eb-4324-92f8-e74e2307ea1c" alt="logo" style={{ width:"68px"}}></img>
-          <Link to={"/"} className="brand-logo" style={{color:"#EEEEEE"}}>
-            Emaily
-          </Link>
+      <nav className="nav-bar-fix">
+        <div className="nav-div" style={{ background:"#333C83", opacity: 0.9}}>
+          <div className="nav-div-logo">
+            <img src="https://firebasestorage.googleapis.com/v0/b/emaily-956d8.appspot.com/o/emaily.png?alt=media&token=24c103b8-87eb-4324-92f8-e74e2307ea1c" alt="logo" style={{ width:"68px", height:"64px"}}></img>
+            <Link to={"/"} className="emaily-logo" style={{color:"#EEEEEE"}}>
+              Emaily
+            </Link>
+          </div>
           <ul className="right">{this.renderContent()}</ul>
         </div>
       </nav>
