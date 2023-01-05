@@ -63,13 +63,16 @@ body{
     justify-content:center;
     align-items: center;
 }
+.container-footer{
+	height: 69px !important;
+}
 .container-block-footer{
     position: fixed;
     left: 0;
     bottom: 0;
     padding: 10px;
     width: 100%;
-    height: auto;
+    height: 69px;
     background-color: #d2c9bc;
     color: black;
     display: flex;
@@ -95,6 +98,7 @@ body{
 	justify-content: space-between;
 	align-items: center;
 }
+
 .nav-div-logo {
 	display: flex;
 	justify-content: space-between;
@@ -102,6 +106,19 @@ body{
 }
 .emaily-logo {
 	font-size: 2.1rem;
+}
+
+.lista-header > li > a{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ }
+.logout{
+	margin-left: 3px !important;
+}
+.space-buttons{
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
 @media screen and (max-width: 1300px){
@@ -163,6 +180,72 @@ body{
 		justify-content: center;
 	}
 }
+
+@media screen and (max-width: 679px){
+	.nav-div{
+		height: 140px;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.lista-header{
+		width: 90%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.lista-header > li > i{
+		height: 56px;
+
+	}
+}
+
+@media screen and (max-width: 580px){
+	.lista-header{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 518px){
+	.nav-div{
+		height: 230px;
+		line-height: 35px;
+	}
+	.lista-header{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.lista-header > li {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		border-width: 2px;
+		border-top: black;
+	}
+	.emaily-logo{
+		width: 100px;
+	}
+}
+
+@media screen and (max-height: 1000px){
+	.containter-cards{
+		height: auto !important;
+	}
+}
+
+@media screen and (max-height: 600px){
+	.containter-cards{
+		height: 100% !important;
+	}
+
+}
+
+
+.card, .card-action{
+	position: inherit !important;
+}
+
+
 
 #nav-container{
 	color: black;

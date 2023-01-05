@@ -16,10 +16,10 @@ class Header extends Component {
         );
       default:
         return [
-          <li key="1" style={{padding:"0px 10px"}}><Link to={this.props.auth ?"/surveys":"/"} >Mis Encuestas</Link></li>,
           <li key="2"><PaymentClassic/></li>,
+          <li key="1" style={{padding:"0px 10px"}}><Link to={this.props.auth ?"/surveys":"/"} >Mis Encuestas</Link></li>,
           <li key="3" style={{margin:'0 10px'}}>Creditos: {this.props.auth.credits}</li>,
-          <li key="4"><a href="/api/logout">Cerrar sesión<i className="material-icons right" style={{ marginLeft:"2px", marginTop:"1px"}}>exit_to_app</i></a></li> ]
+          <li key="4"><a href="/api/logout">Cerrar sesión<i className="material-icons right logout">exit_to_app</i></a></li> ]
         ;
     }
   }
@@ -33,7 +33,7 @@ class Header extends Component {
               Emaily
             </Link>
           </div>
-          <ul className="right">{this.renderContent()}</ul>
+          <ul className="lista-header">{this.renderContent()}</ul>
         </div>
       </nav>
     );

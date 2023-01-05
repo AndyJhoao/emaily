@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchSurveys,fetchUser,deleteSurvey } from "../../actions";
-import { useState } from "react";
+
 
 
 class SurveyList extends Component {
@@ -24,7 +24,7 @@ class SurveyList extends Component {
                         <a style={{ color:"black"}}><label style={{fontSize:"1em",color:"#967E76"}}><i><b>No: </b></i></label>{ survey.no }</a>
                         
                     </div>
-                   
+                
                 </div>
             );
         })

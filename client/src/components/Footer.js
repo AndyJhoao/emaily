@@ -10,7 +10,7 @@ const Footer = () => {
     //     isClicked(!clicked);
     // }
     return (
-        <div>
+        <div className="container-footer">
             <footer className="container-block-footer">
                 <div>
                     <p>© 2023 </p>
