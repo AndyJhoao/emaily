@@ -5,6 +5,7 @@ import { reduxForm , Field } from "redux-form";
 import SurveyField from "./SurveyField";
 import validateEmails from "../../utils/validateEmails";
 import formFields from "./formFields";
+import SurveyFieldArea from "./SurveyFieldArea";
 
 class SurveyForm extends Component {
     renderField(){
@@ -19,6 +20,7 @@ class SurveyForm extends Component {
             <div className="">
                 <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
                     {this.renderField()}
+                    <Field component={SurveyFieldArea} type="text" label={"Cuerpo"} name={"body"}></Field>
                     <Link style={{marginTop:"20px"}} to="/surveys" className="red btn-flat left white-text space-buttons">Cancel<i className="material-icons right">keyboard_return</i></Link>
                     <button style={{marginTop:"20px"}} type="submit" className="teal btn-flat right white-text space-buttons">Next   <i className="material-icons right">done</i></button>
                 </form>
@@ -34,6 +36,11 @@ function validate(values){
             errors[name] = 'Debes de ingresar un valor'
         }
     });
+    
+
+    console.log(SurveyFieldArea);
+
+
     errors.recipients = validateEmails(values.recipients|| '');
 
     return errors;

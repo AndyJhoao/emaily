@@ -6,11 +6,17 @@ import * as actions from "../../actions"
 import { withRouter } from "react-router-dom";
 
 const SurveyReview = ({ onCancel, formValues, submitSurvey, history }) =>{
-    const reviewFields = _.map(formFields,({ label, name})=>{
+    const formFieldsReview = [
+        {label:"Título de la campaña",name:"title"},
+        {label:"Asunto del correo",name:"subject"},
+        {label:"Cuerpo del correo",name:"body"},
+        {label:"Destinatarios",name:"recipients"}
+    ]
+    const reviewFields = _.map(formFieldsReview,({label, name})=>{
         return(
             <div key={name} style={{margin:"20px 20px"}}>
                 <label>{label}</label>
-                <div>{formValues[name]}</div>
+                <div>{formValues[name] || name}</div>
             </div>
         )
     })
