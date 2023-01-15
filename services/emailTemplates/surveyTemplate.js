@@ -2,7 +2,13 @@ const keys = require("../../config/keys")
 
 module.exports = (survey) =>{
     return `
-    <html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Mail Template</title>
+        </head>
         <body style="display: flex; flex-direction: column; justify-content: center; align-items: center; ">
             <div style="width: 500px; height: auto; background-color: rgba(240, 232, 223, 1); border-radius: 2%;">
                 <div style="width: 500px; height: 200px; border-radius: 2%;">
@@ -15,8 +21,8 @@ module.exports = (survey) =>{
                         <p style="text-align: justify; padding: 20px 40px">${survey.body}</p>
                     </div>
                 <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; color: black; padding-bottom: 30px;">
-                    <a style="text-decoration: none; color: black; padding: 10px; font-weight: bold;" href="${keys.redirectDomain}api/surveys/${survey.id}/yes">Si</a>
-                    <a style="text-decoration: none; color: black; padding: 10px; font-weight: bold;" href="${keys.redirectDomain}api/surveys/${survey.id}/no">No</a>
+                    <a style="text-decoration: none; color: black; padding: 10px; font-weight: bold;" href="${keys.redirectDomain}/api/surveys/${survey.id}/yes">Si</a>
+                    <a style="text-decoration: none; color: black; padding: 10px; font-weight: bold;" href="${keys.redirectDomain}/api/surveys/${survey.id}/no">No</a>
                 </div>
                 <footer style="background-color: rgb(228, 221, 213); padding-top: 20px;">
                     <div style="display: flex; justify-content: center">
